@@ -127,7 +127,9 @@ async function main() {
   function addArrowMarker({ element, position, length, style = "simple" }) {
     const color = element.attr("stroke")
     const strokeWidth = element.attr("stroke-width")
-    const markerSize = length * 2
+    const markerSize = (length * 2) * 1.1
+    const middle = markerSize / 2
+    
     element.marker(position, markerSize, markerSize, function(add) {
       let points
       this.attr("markerUnits", "userSpaceOnUse")
@@ -135,9 +137,9 @@ async function main() {
         // this.ref(1, length)
         // add.rect(markerSize, markerSize).fill("none").stroke({ width: 1, color: "red" })
         points = [
-          [markerSize - .5, .5],
-          [length, length],
-          [markerSize - .5, markerSize - .5]
+          [middle + length, middle - length],
+          [middle, middle],
+          [middle + length, middle + length]
         ]
       } else {
         // this.ref(length - 1, length)
@@ -146,9 +148,9 @@ async function main() {
         //   .fill("none")
         //   .stroke({ width: 1, color: "red" })
         points = [
-          [.5, .5],
-          [length, length],
-          [.5, markerSize - .5]
+          [middle - length, middle - length],
+          [middle, middle],
+          [middle - length, middle + length]
         ]
       }
       if (style === "triangle") {
@@ -169,14 +171,13 @@ async function main() {
     const strokeWidth = element.attr("stroke-width")
     const outerSize = (length * 2 + strokeWidth)
     const markerSize = 2 * outerSize
+    const middle = markerSize / 2
     element.marker(position, markerSize, markerSize, function(add) {
       let cx, cy = markerSize / 2
       if (position === "start") {
-        this.ref(markerSize / 2, markerSize / 2)
-        cx = markerSize / 2 + outerSize / 2 - 1
+        cx = middle + outerSize / 2 - 1
       } else {
-        this.ref(markerSize / 2, markerSize / 2)
-        cx = markerSize / 2 - outerSize / 2 + 1
+        cx = middle - outerSize / 2 + 1
       }
       this.attr("markerUnits", "userSpaceOnUse")
       // add.rect(markerSize, markerSize).fill("none").stroke({ width: 1, color: "red" })
@@ -189,6 +190,30 @@ async function main() {
     })
   }
 
+  function addDiamondMarker({ element, position, length }) {
+    const strokeWidth = element.attr("stroke-width")
+    const outerSize = 4 * length + strokeWidth
+    const markerSize = 1.1 * outerSize
+    const middle = markerSize / 2
+    element.marker(position, markerSize, markerSize, function(add) {
+      this.attr("markerUnits", "userSpaceOnUse")
+      let points
+      if (position === "start") {
+        points = [
+          [middle, middle], [middle + length, middle - length], [middle + length * 2, middle],
+          [middle + length, middle + length]
+        ]
+      } else {
+        points = [
+          [middle, middle], [middle - length, middle - length], [middle - length * 2, middle],
+          [middle - length, middle + length]
+        ]
+      }
+      // add.rect(markerSize, markerSize).fill("none").stroke({ width: 1, color: "red"})
+      add.polygon(points).fill("white").stroke({ width: strokeWidth, color: "black" })
+    })
+  }
+
   function addMarker(element, style, position, length) {
     switch (style) {
       case "simple":
@@ -196,6 +221,8 @@ async function main() {
         return addArrowMarker({ element, position, length, style })
       case "circle":
         return addCircleMarker({ element, position, length })
+      case "diamond":
+        return addDiamondMarker({ element, position, length })
       default:
         return undefined
     }

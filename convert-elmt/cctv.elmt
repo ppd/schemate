@@ -1,5 +1,5 @@
 <definition type="element" version="0.80" orientation="dyyy" width="160" hotspot_x="65" hotspot_y="80" link_type="simple" height="130">
-    <uuid uuid="{ee7ce5ef-2d4d-440b-9fc6-2548138435f7}"/>
+    <uuid uuid="{6246a9f8-dc4c-46cb-a6a3-ca06a1e8d1ac}"/>
     <names>
         <name lang="pl">Kamera</name>
         <name lang="fr">Camera</name>
@@ -23,8 +23,10 @@
         <line length2="1.5" x1="-25.5" x2="-17.5" end1="none" antialias="false" y2="5" end2="none" style="line-style:normal;line-weight:normal;filling:none;color:black" y1="5" length1="1.5"/>
         <line length2="1.5" x1="-60" x2="-30" end1="circle" antialias="false" y2="-30" end2="none" style="line-style:dashed;line-weight:normal;filling:none;color:red" y1="-60" length1="1.5"/>
         <line length2="1.5" x1="0" x2="20" end1="simple" antialias="false" y2="-75" end2="circle" style="line-style:normal;line-weight:normal;filling:none;color:black" y1="-30" length1="5"/>
-        <line length2="5" x1="35" x2="90" end1="circle" antialias="false" y2="-40" end2="circle" style="line-style:normal;line-weight:eleve;filling:none;color:black" y1="-40" length1="5"/>
-        <line length2="10" x1="-57" x2="75" end1="circle" antialias="false" y2="45" end2="simple" style="line-style:normal;line-weight:hight;filling:none;color:black" y1="45" length1="10"/>
+        <line length2="8" x1="35" x2="90" end1="diamond" antialias="false" y2="-40" end2="diamond" style="line-style:normal;line-weight:normal;filling:none;color:black" y1="-40" length1="5"/>
+        <line length2="25" x1="-57" x2="75" end1="circle" antialias="false" y2="45" end2="simple" style="line-style:normal;line-weight:hight;filling:none;color:black" y1="45" length1="10"/>
+        <line length2="1.5" x1="-21" x2="51" end1="none" antialias="false" y2="30" end2="none" style="line-style:normal;line-weight:normal;filling:none;color:black" y1="30" length1="1.5"/>
+        <line length2="1.5" x1="50" x2="75" end1="none" antialias="false" y2="45" end2="none" style="line-style:normal;line-weight:normal;filling:none;color:black" y1="20" length1="1.5"/>
         <terminal orientation="s" x="0" y="10"/>
         <terminal orientation="s" x="-10" y="10"/>
         <terminal orientation="w" x="-30" y="0"/>
