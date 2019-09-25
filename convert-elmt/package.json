@@ -1,0 +1,13 @@
+{
+  "name": "convert-elmt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Maximilian Federle <max.federle@linergy.de>",
+  "license": "MIT",
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.0.13",
+    "fs-extra": "^8.1.0",
+    "svgdom": "^0.0.20",
+    "xml2js": "^0.4.22"
+  }
+}

@@ -1,0 +1,107 @@
+<definition width="450" orientation="dyyy" link_type="simple" type="element" version="0.70" height="170" hotspot_x="225" hotspot_y="85">
+    <uuid uuid="{9f658308-8f1a-4e72-badf-e50015ea5248}"/>
+    <names>
+        <name lang="en">Andino X2</name>
+    </names>
+    <elementInformations>
+        <elementInformation name="manufacturer" show="1"></elementInformation>
+        <elementInformation name="supplier" show="1"></elementInformation>
+        <elementInformation name="machine-manufacturer-reference" show="1"></elementInformation>
+        <elementInformation name="label" show="1"></elementInformation>
+        <elementInformation name="comment" show="1"></elementInformation>
+        <elementInformation name="plant" show="1"></elementInformation>
+        <elementInformation name="quantity" show="1"></elementInformation>
+        <elementInformation name="designation" show="1"></elementInformation>
+        <elementInformation name="unity" show="1"></elementInformation>
+        <elementInformation name="description" show="1"></elementInformation>
+        <elementInformation name="manufacturer-reference" show="1"></elementInformation>
+    </elementInformations>
+    <informations></informations>
+    <description>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="A B" x="-102" rotation="0" color="#000000" y="-62"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="+ -" x="-132" rotation="0" color="#000000" y="-62"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="A B" x="-42" rotation="0" color="#000000" y="-62"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="A B C D E F" x="9" rotation="0" color="#000000" y="-62"/>
+        <text font="Monospace,7,-1,5,50,0,0,0,0,0" text="Ethernet&#xa;  10M" x="48.25" rotation="0" color="#000000" y="42"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="A B" x="-72.5" rotation="0" color="#000000" y="-62"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="1 2" x="108" rotation="0" color="#000000" y="69"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="MPM 1" x="24" rotation="0" color="#000000" y="-47"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="MPM 2" x="94" rotation="0" color="#000000" y="-48"/>
+        <text font="Monospace,7,-1,5,50,0,0,0,0,0" text="Ethernet&#xa;  100M" x="168" rotation="0" color="#000000" y="42"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="3 4" x="138" rotation="0" color="#000000" y="69"/>
+        <text font="Monospace,5,-1,5,50,0,0,0,0,0" text="    USB &#xa;Prog &amp; Diag" x="-20.5" rotation="0" color="#000000" y="46"/>
+        <text font="Monospace,7,-1,5,50,0,0,0,0,0" text="Input&#xa;  2" x="-94" rotation="0" color="#000000" y="42"/>
+        <text font="Monospace,7,-1,5,50,0,0,0,0,0" text="Input&#xa;  3" x="-54" rotation="0" color="#000000" y="42"/>
+        <rect width="20" height="22" rx="0" x="135" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="58"/>
+        <rect width="10" height="22" rx="0" x="-3" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="58"/>
+        <rect width="10" height="22" rx="0" x="65" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="58"/>
+        <rect width="30" height="22" rx="0" x="-55" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="58"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="A B C D E F" x="79" rotation="0" color="#000000" y="-62"/>
+        <rect width="20" height="22" rx="0" x="105" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="58"/>
+        <rect width="20" height="22" rx="0" x="-75" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="-80"/>
+        <dynamic_text Halignment="AlignLeft" font="Monospace,9,-1,5,50,0,0,0,0,0" text_from="UserText" x="40" rotation="0" z="21" frame="false" Valignment="AlignTop" uuid="{50fce7f3-07fa-4d39-b767-8d1110ce4915}" y="-10" text_width="-1">
+            <text>_</text>
+        </dynamic_text>
+        <rect width="20" height="22" rx="0" x="-45" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="-80"/>
+        <rect width="30" height="22" rx="0" x="-95" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="58"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="USB" x="138" rotation="0" color="#000000" y="55"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="USB" x="108" rotation="0" color="#000000" y="55"/>
+        <rect width="60" height="22" rx="0" x="75" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="-80"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="+ IN -" x="-54" rotation="0" color="#000000" y="69"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="Relay&#xa;  2" x="-77" rotation="0" color="#000000" y="-48"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="Relay&#xa;  3" x="-46" rotation="0" color="#000000" y="-48"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="+ IN -" x="-94" rotation="0" color="#000000" y="69"/>
+        <text font="Monospace,7,-1,5,50,0,0,0,0,0" text="Input&#xa;  1" x="-134" rotation="0" color="#000000" y="42"/>
+        <rect width="20" height="22" rx="0" x="-105" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="-80"/>
+        <rect width="440" height="160" rx="0" x="-220" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="-80"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="Relay&#xa;  1" x="-107" rotation="0" color="#000000" y="-48"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="L N" x="-182" rotation="0" color="#000000" y="-62"/>
+        <rect width="20" height="22" rx="0" x="-135" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="-80"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="Power&#xa; Out" x="-137" rotation="0" color="#000000" y="-48"/>
+        <rect width="20" height="22" rx="0" x="-185" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="-80"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="Power&#xa; In" x="-187" rotation="0" color="#000000" y="-48"/>
+        <rect width="30" height="22" rx="0" x="-135" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="58"/>
+        <text font="Monospace,6,-1,5,50,0,0,0,0,0" text="+ IN -" x="-134" rotation="0" color="#000000" y="69"/>
+        <rect width="10" height="22" rx="0" x="185" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="58"/>
+        <text font="Sans Serif,20,-1,5,50,0,0,0,0,0" text="Andino X2" x="-188" rotation="0" color="#000000" y="9"/>
+        <rect width="60" height="22" rx="0" x="5" ry="0" style="line-style:normal;line-weight:normal;filling:none;color:black" antialias="false" y="-80"/>
+        <terminal orientation="n" x="60" y="-74"/>
+        <terminal orientation="n" x="40" y="-74"/>
+        <terminal orientation="n" x="10" y="-74"/>
+        <terminal orientation="n" x="-60" y="-74"/>
+        <terminal orientation="n" x="30" y="-74"/>
+        <terminal orientation="n" x="-30" y="-74"/>
+        <terminal orientation="s" x="70" y="75"/>
+        <terminal orientation="n" x="50" y="-74"/>
+        <terminal orientation="n" x="-170" y="-74"/>
+        <terminal orientation="n" x="20" y="-74"/>
+        <terminal orientation="s" x="-110" y="75"/>
+        <terminal orientation="s" x="-130" y="75"/>
+        <terminal orientation="s" x="-120" y="75"/>
+        <terminal orientation="n" x="-100" y="-74"/>
+        <terminal orientation="n" x="-180" y="-74"/>
+        <terminal orientation="n" x="-130" y="-74"/>
+        <terminal orientation="n" x="-90" y="-74"/>
+        <terminal orientation="n" x="-120" y="-74"/>
+        <terminal orientation="s" x="190" y="75"/>
+        <terminal orientation="s" x="-80" y="75"/>
+        <terminal orientation="s" x="-70" y="75"/>
+        <terminal orientation="n" x="80" y="-74"/>
+        <terminal orientation="s" x="-30" y="75"/>
+        <terminal orientation="s" x="120" y="76"/>
+        <terminal orientation="n" x="120" y="-74"/>
+        <terminal orientation="n" x="90" y="-74"/>
+        <terminal orientation="s" x="-90" y="75"/>
+        <terminal orientation="s" x="-50" y="75"/>
+        <terminal orientation="n" x="110" y="-74"/>
+        <terminal orientation="s" x="140" y="76"/>
+        <terminal orientation="n" x="100" y="-74"/>
+        <terminal orientation="n" x="-40" y="-74"/>
+        <terminal orientation="s" x="-40" y="75"/>
+        <terminal orientation="s" x="110" y="76"/>
+        <terminal orientation="n" x="-70" y="-74"/>
+        <terminal orientation="n" x="130" y="-74"/>
+        <terminal orientation="s" x="150" y="76"/>
+        <terminal orientation="s" x="2" y="75"/>
+    </description>
+</definition>
