@@ -16,14 +16,6 @@ function parseStyle(qetStyleString) {
   return map
 }
 
-function parseFont(qetFontString) {
-  const [family, size] = qetFontString.split(",")
-  return {
-    family,
-    size: `${size}pt`
-  }
-}
-
 function attrsFromQETStyle(qetStyleString) {
   const lineStyleToDasharray = {
     dashed: "5 1",

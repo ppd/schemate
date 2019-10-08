@@ -1,13 +1,13 @@
 const fs = require("fs-extra")
 
 const { parseElmt, parseFont, attrsFromQETStyle } = require("./parse")
-const addMarker = require("./markers")
-const svg = require("./svg")
+const addMarker = require("./render/markers")
+const svg = require("./render/svg")
 
-const renderRectangle = require("./render/rectangle")
-const renderLine = require("./render/line")
-const renderText = require("./render/text")
-const renderTerminal = require("./render/terminal")
+const renderRectangle = require("./render/Rect")
+const renderLine = require("./render/Line")
+const renderText = require("./render/Text")
+const renderTerminal = require("./render/Terminal")
 
 async function main() {
   const elmtXML = await fs.readFile("./cctv.elmt", "utf-8")
