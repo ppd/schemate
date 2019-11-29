@@ -2,7 +2,7 @@ const fs = require("fs-extra")
 const Element = require("./Element")
 
 async function main() {
-  const element = await Element.fromFile("./data/cctv.elmt")
+  const element = await Element.fromFile("./data/camera-edited.elmt")
   // console.log(element)
   const svg = element.renderSVG()
 

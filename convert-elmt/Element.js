@@ -1,30 +1,32 @@
 const { parseStringPromise: parseXML } = require("xml2js")
 const svg = require("./svg")
-const { Rect, Line, Text, Terminal } = require("./entities")
+const { Rect, Line, Text, Terminal, Dummy } = require("./parts")
 
-function toArray(v) {
-  if (v === undefined) {
-    return []
+function makePart(data) {
+  switch (data["#name"]) {
+    case "text":
+      return new Text(data.$)
+    case "rect":
+      return new Rect(data.$)
+    case "line":
+      return new Line(data.$)
+    case "terminal":
+      return new Terminal(data.$)
+    case "dynamic_text":
+    case "polygon":
+    case "arc":
+      return new Dummy(data)
+    default:
+      throw new Error(`Unknown part ${data["#name"]}`, data)
   }
-  return Array.isArray(v) ? v : [v]
-}
-
-function asType(Type) {
-  return data => new Type(data)
 }
 
 class Element {
   constructor({
-    texts = [],
-    rects = [],
-    terminals = [],
-    lines = [],
+    parts = [],
     hotspot = [0, 0]
   } = {}) {
-    this.texts = texts
-    this.rects = rects
-    this.terminals = terminals
-    this.lines = lines
+    this.parts = parts
     this.hotspot = hotspot
   }
 
@@ -36,32 +38,27 @@ class Element {
 
   static async fromXML(xml) {
     const elmt = await parseXML(xml, {
-      mergeAttrs: true,
       explicitArray: false,
-      attrValueProcessors: [require("xml2js/lib/processors").parseNumbers]
+      attrValueProcessors: [require("xml2js/lib/processors").parseNumbers],
+      preserveChildrenOrder: true,
+      explicitChildren: true
     })
 
     const definition = elmt.definition
 
-    const { hotspot_x, hotspot_y } = definition
+    const { hotspot_x, hotspot_y } = definition.$
     const hotspot = [hotspot_x, hotspot_y]
 
-    const texts = toArray(definition.description.text).map(asType(Text))
-    const rects = toArray(definition.description.rect).map(asType(Rect))
-    const terminals = toArray(definition.description.terminal).map(asType(Terminal))
-    const lines = toArray(definition.description.line).map(asType(Line))
+    const parts = definition.description.$$.map(makePart)
 
-    return new this({ texts, rects, terminals, lines, hotspot })
+    return new this({ parts, hotspot })
   }
 
   renderSVG() {
     const draw = svg()
     const group = draw.group()
-    const entities = [this.rects, this.lines, this.texts, this.terminals]
-    for (const entityGroup of entities) {
-      for (const entity of entityGroup) {
-        entity.renderSVG(group)
-      }
+    for (const part of this.parts) {
+      part.renderSVG(group)
     }
     group.translate(...this.hotspot)
     return draw
