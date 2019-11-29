@@ -15,7 +15,7 @@ class Text {
     this.text = text
   }
 
-  render(group) {
+  renderSVG(group) {
     const textElement = group
       .plain(this.text)
       .attr({ x: this.x, y: this.y })

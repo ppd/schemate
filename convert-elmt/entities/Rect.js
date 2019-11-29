@@ -1,5 +1,3 @@
-const { attrsFromQETStyle } = require("../parse")
-
 class Rect {
   constructor({ x, y, width, height, rx, ry, style }) {
     this.x = x
@@ -10,13 +8,13 @@ class Rect {
     this.ry = ry
     this.style = style
   }
-
-  render(group) {
+  
+  renderSVG(group) {
     return group
       .rect(this.width, this.height)
       .move(this.x, this.y)
       .radius(this.rx, this.ry)
-      .attr(attrsFromQETStyle(this.style))
+      .attrsFromQETStyle(this.style)
   }
 }
 

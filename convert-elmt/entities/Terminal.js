@@ -9,7 +9,7 @@ class Terminal {
     this.orientation = orientation
   }
 
-  render(group) {
+  renderSVG(group) {
     const terminalGroup = group.group()
     const [dX, dY] = {
       n: [0, 1],
