@@ -24,10 +24,14 @@ function makePart(data) {
 class Element {
   constructor({
     parts = [],
-    hotspot = [0, 0]
+    hotspot = [0, 0],
+    height,
+    width
   } = {}) {
     this.parts = parts
     this.hotspot = hotspot
+    this.height = height
+    this.width = width
   }
 
   static async fromFile(filepath) {
@@ -46,16 +50,17 @@ class Element {
 
     const definition = elmt.definition
 
-    const { hotspot_x, hotspot_y } = definition.$
+    const { hotspot_x, hotspot_y, height, width } = definition.$
     const hotspot = [hotspot_x, hotspot_y]
 
     const parts = definition.description.$$.map(makePart)
 
-    return new this({ parts, hotspot })
+    return new this({ parts, hotspot, height, width })
   }
 
   renderSVG() {
     const draw = svg()
+    draw.viewbox(0, 0, this.width, this.height)
     const group = draw.group()
     for (const part of this.parts) {
       part.renderSVG(group)
